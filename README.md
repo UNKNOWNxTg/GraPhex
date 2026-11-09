@@ -27,8 +27,8 @@ npm audit
 - `src/services/messagingTransport.ts` — transport boundary for a future Go API.
 - `src/styles.css` — responsive monochrome design tokens and component styling.
 
-The future Go service can replace the preview state through `MessagingTransport`. Planned REST routes are `GET /api/v1/conversations`, `GET /api/v1/conversations/{id}/messages`, and `POST /api/v1/conversations/{id}/messages`; live events use `/ws?conversation_id={id}`. No backend or database is included in this phase.
+The future Go service can replace the preview state through `MessagingTransport`. Its planned REST routes are `GET /api/v1/conversations`, `GET /api/v1/conversations/{id}/messages`, and `POST /api/v1/conversations/{id}/messages`; live events use `/ws?conversation_id={id}`. No backend or database is included in this phase.
 
 ## Deploy
 
-Vercel builds with `npm run build` and serves `dist/`. The GitHub Actions workflow runs lint and production build checks on pushes and pull requests.
+Vercel detects the Vite app and builds with `npm run build`, serving `dist/`. The GitHub Actions workflow runs lint and production build checks on pushes and pull requests.
